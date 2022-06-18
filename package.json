@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "This Project explains all Node JS examples",
   "main": "app.js",
-  "publishConfig": {
-    "registry": "http://43.204.144.34:9980/mithuntechnologies/repository/nodejs-repo/"
-  },
+//  "publishConfig": {
+//    "registry": "http://43.204.144.34:9980/mithuntechnologies/repository/nodejs-repo/"
+// },
   "scripts": {
     "server": "http-server -c-1 -p 9999",
     "start1": "nodemon app.js",
