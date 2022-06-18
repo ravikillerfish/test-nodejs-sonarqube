@@ -10,7 +10,7 @@ pipeline {
          steps {
             nodejs(nodeJSInstallationName: 'nodejs-sonarqube') {
 	       withSonarQubeEnv(installationName: 'sonarqube',credentialsId: 'sonarqube-secret') {
-                     sh 'npm install sonar'
+                     sh 'npm install'
                      sh 'npm run sonar'
                }
      //          timeout(20) {
