@@ -13,12 +13,12 @@ pipeline {
                      sh 'npm install'
                      sh 'npm run sonar'
                }
-     //          timeout(20) {
-     //            def quality = waitForQualityGate()
-     //           if (quality.status != 'OK') {
-     //             error "Pipeline aborted due to quality gate failure: ${qg.status}"
-     //         }
-     //     }
+               timeout(20) {
+                def quality = waitForQualityGate()
+                if (quality.status != 'OK') {
+                  error "Pipeline aborted due to quality gate failure: ${quality.status}"
+                }
+              }
 
             }
          }
