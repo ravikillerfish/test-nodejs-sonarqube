@@ -13,7 +13,7 @@ pipeline {
                      sh 'npm install'
                      sh 'npm run sonar'
                }
-               scritp {
+               script {
                   timeout(20) {
                   def quality = waitForQualityGate()
                   if (quality.status != 'OK') {
